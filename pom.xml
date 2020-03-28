@@ -285,7 +285,7 @@
     </license>
   </licenses>
     
-    <distributionManagement>
+  <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
       <id>Landry333</id>
