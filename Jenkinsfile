@@ -6,9 +6,6 @@ pipeline {
         sh './mvnw clean'
       }
     }
-  environment {
-    user = 'Landry333'
-  }
 }
 }
   
