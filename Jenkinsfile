@@ -21,12 +21,19 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh 'mvn deploy'
+        sh '''stage(\'Deploy\') {
+      when{
+        branch \'master\'
       }
-    }
+      steps {
+        echo \'Deployment\'
+      }
+    }'''
+        }
+      }
 
+    }
+    environment {
+      user = 'Landry333'
+    }
   }
-  environment {
-    user = 'Landry333'
-  }
-}
