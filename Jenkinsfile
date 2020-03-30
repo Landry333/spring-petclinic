@@ -21,19 +21,12 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh '''stage(\'Deploy\') {
-      when{
-        branch \'master\'
+        sh '        echo \'Deployment\''
       }
-      steps {
-        echo \'Deployment\'
-      }
-    }'''
-        }
-      }
+    }
 
-    }
-    environment {
-      user = 'Landry333'
-    }
   }
+  environment {
+    user = 'Landry333'
+  }
+}
