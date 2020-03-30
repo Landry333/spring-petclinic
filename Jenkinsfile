@@ -6,29 +6,6 @@ pipeline {
         sh './mvnw clean'
       }
     }
-
-    stage('Test') {
-      steps {
-        sh './mvnw test'
-      }
-    }
-
-    stage('Package') {
-      steps {
-        sh './mvnw package'
-      }
-    }
-
-    stage('Deploy') {
-      when{
-        branch 'master'
-      }
-      steps {
-        echo 'Deployment'
-      }
-    }
-
-  }
   environment {
     user = 'Landry333'
   }
